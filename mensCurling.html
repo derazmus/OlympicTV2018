@@ -5,10 +5,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Olympic TV 2018</title>
-  <link rel="shortcut icon" type="image/jpg" href="logo.jpg"/>
+    <link rel="shortcut icon" type="image/jpg" href="logo.jpg"/>
+  	<!--css-->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<!--bootstrap-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Javascript -->
+  	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 <div class="jumbotron" id = "men">
@@ -42,9 +45,14 @@
 <br>
 <h1 id = "title"> Mens Curling </h1>
 <br>
-<div class = "row justify-content-md-center">
-<input type="date" id="myInput" onkeyup="myFunction()" placeholder="Search for date..">
+
+<div class="input-group justify-content-md-center">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Search by date:</span>
+  </div>
+  <input type="date" id="input" onkeyup ="myFunction()" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
 </div>
+
 
 <div class = "container">
 <div class = "row justify-content-md-center">
@@ -98,7 +106,7 @@
 function myFunction() {
   // Declare variables 
   var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
+  input = document.getElementById("input");
   filter = input.value.toUpperCase();
   table = document.getElementById("men");
   tr = table.getElementsByTagName("tr");
