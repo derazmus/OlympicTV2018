@@ -1,0 +1,22 @@
+#main {
+	background-color: #ef3d47;
+}
+
+#top {
+	background-color: lightblue;
+}
+
+#men {
+	background-color: gold;
+}
+#title{
+	text-align: center;
+}
+
+body {
+	background-color: #FFFDD0;
+}
+
+td.faded {
+    opacity: 0.2;
+}

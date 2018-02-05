@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Olympic TV 2018</title>
+  <link rel="shortcut icon" type="image/jpg" href="logo.jpg"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<div class="jumbotron" id = "men">
+  <h1 class="display-4">2018 Olympics in PyeongChang</h1>
+  <p class="lead">Quick buttons to Olympic events schedule</p>
+  <hr class="my-4">
+<br>
+
+	<div class = "container">
+					<div class = "row justify-content-sm-center">
+              			<div class = "col justify-content-md-center">
+					    	<a href= "index.html" class="btn btn-danger btn-lg"> Go Home</a>
+              			</div>
+
+              			<div class = "col justify-content-md-center">
+                 			<a href= "https://www.pyeongchang2018.com/en/game-time/results/OWG2018/en/general/competition-schedule.htm" class="btn btn-primary btn-lg"> Full Schedule</a>
+                  		 </div>
+
+              			<div class = "col justify-content-md-center">
+					    	<a href= "womensCurling.html" class="btn btn-secondary btn-lg"> Womens Curling</a>
+              			</div>
+
+               			<div class = "col justify-content-md-center">
+					   		 <a href= "mixedDoubles.html" class="btn btn-success btn-lg"> Mixed Doubles Curling</a>
+              			</div>
+
+            		</div>
+	</div>
+</div>
+<body>
+<br>
+<h1 id = "title"> Mens Curling </h1>
+<br>
+<div class = "row justify-content-md-center">
+<input type="date" id="myInput" onkeyup="myFunction()" placeholder="Search for date..">
+</div>
+
+<div class = "container">
+<div class = "row justify-content-md-center">
+<table class="table table-striped" id="men">
+  <thead>
+    <tr>
+      <th scope="col">DATE</th>
+      <th scope="col">TIME</th>
+      <th scope="col"> EVENT</th>
+      <th scopre="col">TEAMS </th>
+    </tr>
+  </thead>
+
+<div class = "row justify-content-md-center">
+</div>
+
+  <tbody>
+  	<tr>
+      <td>02/13/2018</td>
+      <td>6:05 pm</td>
+      <td>Men's Tournament #1</td>
+      <td> DEN vs SWE, CAN vs ITA, KOR vs USA, SUI vs GBR</td>
+    </tr>
+
+    <tr>
+      <td>02/14/2018</td>
+      <td>5:05 am</td>
+      <td>Men's Tournament #2</td>
+      <td> CAN vs GBR, KOR vs SWE, SUI vs ITA, NOR vs JPN</td>
+    </tr>
+
+    <tr>
+      <td>02/14/2018</td>
+      <td>11:05 pm</td>
+      <td>Men's Tournament #3</td>
+      <td>USA vs ITA, NOR vd CAN, GBR vs JPN, DEN vs SUI</td>
+    </tr>
+
+    <tr>
+      <td>02/15/2018</td>
+      <td>6:05 pm</td>
+      <td>Men's Tournament #4</td>
+      <td>ITA vs DEN, NOR vs KOR, SWE vs USA</td>
+    </tr>
+   </tbody>
+</table>
+</div>
+</div>
+
+<script>
+function myFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("men");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+    
+</script>
+</body>
